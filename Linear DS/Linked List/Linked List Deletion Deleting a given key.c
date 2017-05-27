@@ -20,11 +20,16 @@ next1->next = node;
 
 }
 
-void Deletion(struct Node *head,int data){
+void Deletion(struct Node **head,int data){
 
 struct Node *next1,*prev;
-next1 = head;
+next1 = *head;
 prev = NULL;
+if(head!= NULL && next1->data == data){
+    *head =  next1->next;
+    free(next1);
+
+}
 while(next1->data !=data ){
    prev = next1;
    next1 = next1->next;
@@ -87,7 +92,7 @@ int main()
      AtEnd(head,45);
      print(head);
      printf("\n");
-     Deletion(head,16);
+     Deletion(&head,16);
      print(head);
 
 
