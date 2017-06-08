@@ -13,7 +13,7 @@ int  ismatchingpair(char op1,char op2)
         return 1;
     if(op1 == '{' && op2 =='}')
         return 1;
-        if(op1 == '{' && op2 =='}')
+        if(op1 == '[' && op2 ==']')
         return 1;
 
  return 0;
