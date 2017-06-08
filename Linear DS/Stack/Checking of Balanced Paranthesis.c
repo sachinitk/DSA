@@ -67,7 +67,7 @@ int isBalanced(char* exp)
             {
                 if(stack == NULL)
                     return 0;
-                else if(ismatchingpair(pop(&stack),exp[i]))
+                else if(!ismatchingpair(pop(&stack),exp[i]))
                     return 0;
             }
             i++;
